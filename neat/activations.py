@@ -22,6 +22,9 @@ def sin_activation(z):
     z = max(-60.0, min(60.0, 5.0 * z))
     return math.sin(z)
 
+def cos_activation(z):
+    z = max(-60.0, min(60.0, 5.0 * z))
+    return math.cos(z)
 
 def gauss_activation(z):
     z = max(-3.4, min(3.4, z))
@@ -121,6 +124,7 @@ class ActivationFunctionSet(object):
         self.add('sigmoid', sigmoid_activation)
         self.add('tanh', tanh_activation)
         self.add('sin', sin_activation)
+        self.add('cos', cos_activation)
         self.add('gauss', gauss_activation)
         self.add('relu', relu_activation)
         self.add('elu', elu_activation)
